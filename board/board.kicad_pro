@@ -56,27 +56,48 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "copper_edge_clearance|146100500|102550500|566f44dc-1c80-4a61-a6e2-376182a88e59|940b2748-9f2f-42ec-bbbc-1b6de0e508db",
+        "copper_edge_clearance|146100500|102550500|566f44dc-1c80-4a61-a6e2-376182a88e59|b13226fa-2340-455c-8d55-54dc692d282f",
+        "copper_edge_clearance|156319613|102550500|566f44dc-1c80-4a61-a6e2-376182a88e59|008c99be-6580-4d74-a5fa-0a24be15a323",
+        "copper_edge_clearance|156319613|102550500|566f44dc-1c80-4a61-a6e2-376182a88e59|45acc667-1df9-42aa-b5a1-79270821b9a5",
+        "courtyards_overlap|148567501|90050001|8366972d-8c4d-46fc-9c86-8efcd3f64297|b6042e27-7f47-4357-97fc-3460c234d5de",
+        "courtyards_overlap|156000001|91500001|8c099868-e6d4-4f1e-8cca-f1696d5f2a74|9edfd252-e549-46ab-b4bc-21299332a7c6",
+        "silk_over_copper|152605302|94525000|f150ed06-b025-44b0-942f-61fa0bf4a009|00000000-0000-0000-0000-000000000000",
+        "silk_over_copper|153194698|97550000|53328735-de4c-4b6f-9a95-02ac1521696b|00000000-0000-0000-0000-000000000000",
+        "silk_overlap|149033333|95212258|560a23a0-479d-4324-9d7f-8def64eefcaf|a5e76a00-d12c-4cf5-976d-ed44fa22ea48",
+        "silk_overlap|150066667|94918633|560a23a0-479d-4324-9d7f-8def64eefcaf|ef4fc45f-7cfa-4883-b30e-9180a3ea1e3b",
+        "silk_overlap|152383333|95187258|f150ed06-b025-44b0-942f-61fa0bf4a009|b8e80528-0ff7-411b-8b30-d7d510e79d81",
+        "silk_overlap|152383333|97737742|53328735-de4c-4b6f-9a95-02ac1521696b|aa345f12-8783-478b-95cb-b4cafcbd1340",
+        "silk_overlap|153422500|95268633|f150ed06-b025-44b0-942f-61fa0bf4a009|20dc88da-0bf0-4aaf-a188-4fbfe853c136",
+        "silk_overlap|153422500|98085300|53328735-de4c-4b6f-9a95-02ac1521696b|cbf25d19-427a-4379-b629-880f43fbb2dc"
+      ],
       "meta": {
         "version": 2
       },
       "rule_severities": {
         "annular_width": "error",
         "clearance": "error",
+        "connection_width": "warning",
         "copper_edge_clearance": "error",
+        "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
+        "footprint": "error",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
         "invalid_outline": "error",
+        "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
+        "lib_footprint_issues": "warning",
+        "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "missing_courtyard": "ignore",
@@ -86,9 +107,14 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
+        "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
+        "solder_mask_bridge": "error",
+        "starved_thermal": "error",
+        "text_height": "warning",
+        "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
         "track_dangling": "warning",
@@ -97,7 +123,6 @@
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
-        "zone_has_empty_net": "error",
         "zones_intersect": "error"
       },
       "rules": {
@@ -113,7 +138,7 @@
         "min_microvia_drill": 0.09999999999999999,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.7999999999999999,
+        "min_text_height": 0.7,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.19999999999999998,
         "min_track_width": 0.127,
@@ -368,18 +393,23 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
       "lib_symbol_issues": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
       "multiple_net_names": "warning",
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
@@ -389,6 +419,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -406,7 +437,7 @@
   "net_settings": {
     "classes": [
       {
-        "bus_width": 12.0,
+        "bus_width": 12,
         "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -420,11 +451,11 @@
         "track_width": 0.2,
         "via_diameter": 0.5,
         "via_drill": 0.2,
-        "wire_width": 6.0
+        "wire_width": 6
       }
     ],
     "meta": {
-      "version": 2
+      "version": 3
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -444,6 +475,8 @@
   "schematic": {
     "annotate_start_num": 0,
     "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
@@ -475,7 +508,11 @@
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_adjust_passive_values": false,
+    "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
@@ -483,10 +520,6 @@
     [
       "57732dd3-1162-4c3f-88bd-31bf473d124d",
       ""
-    ],
-    [
-      "767ce4c6-0e55-4543-92f0-34cb8237a544",
-      "implementation"
     ]
   ],
   "text_variables": {}
